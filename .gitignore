@@ -41,3 +41,8 @@ venv/
 !.elasticbeanstalk/*.cfg.yml
 !.elasticbeanstalk/*.global.yml
 set_env.sh
+
+clean-resource.sh
+clean-vpc.sh
+
+deploy/*.yaml
