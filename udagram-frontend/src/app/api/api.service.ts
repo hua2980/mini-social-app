@@ -61,7 +61,7 @@ export class ApiService {
     const req = new HttpRequest( 'PUT', signed_url, file,
                                   {
                                     headers: headers,
-                                    reportProgress: true, // track progress
+                                    // reportProgress: true, // track progress
                                   });
 
     return new Promise ( resolve => {

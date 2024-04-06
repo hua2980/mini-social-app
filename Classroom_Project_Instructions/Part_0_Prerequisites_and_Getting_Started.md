@@ -129,7 +129,30 @@ The project uses an AWS S3 bucket to store image files.
       ]
    }
    ```
-
+   4. Add the CORS configuration(opens in a new tab) to allow the application running outside of AWS to interact with your bucket. You can use the following configuration:
+   ```json
+   [
+      {
+         "AllowedHeaders":[
+            "*"
+         ],
+         "AllowedMethods":[
+            "POST",
+            "GET",
+            "PUT",
+            "DELETE",
+            "HEAD"
+         ],
+         "AllowedOrigins":[
+            "*"
+         ],
+         "ExposeHeaders":[
+            
+         ]
+      }
+   ]
+   ```
+   Note: In the S3 console, the CORS configuration must be JSON format. Whereas, the CLI can use either JSON or XML format.
    > In the AWS S3 console, the CORS configuration must be JSON format. Whereas, the AWS CLI can use either JSON or XML format.
 
    > Once the policies above are set and you are no longer testing locally, you can disable public access to your bucket.
